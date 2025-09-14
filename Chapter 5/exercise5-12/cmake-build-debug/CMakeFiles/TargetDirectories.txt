@@ -1,0 +1,3 @@
+C:/Users/jefver/Desktop/K&R/Chapter 5/exercise5-12/cmake-build-debug/CMakeFiles/exercise5_12.dir
+C:/Users/jefver/Desktop/K&R/Chapter 5/exercise5-12/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jefver/Desktop/K&R/Chapter 5/exercise5-12/cmake-build-debug/CMakeFiles/rebuild_cache.dir
