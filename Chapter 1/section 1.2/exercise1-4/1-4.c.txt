@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main() {
+   /* Write a program to print the corresponding Celsius to Fahrenheit table */
+   /* TODO... find guidelines to complete exercise... */
+
+}
