@@ -59,8 +59,8 @@ int main(int argc, char *argv[])
     int nlines;             /* number of input lines read */
     char buf[ALLOCSIZE] = {'\0'};
     int order = 1;
+    
     // holds options for each field
-    // bits 7-4 = field 1 // bits 3-0 = field 2
     uint8_t field_options = 0;
 
     /* COMMAND LINE ARG PARSING */
@@ -79,7 +79,6 @@ int main(int argc, char *argv[])
 
                 field_sorts[field_index].field_num = temp;
 
-                // do stuff for option bits next
                 int max_fields = 4;
                 while (*p != '\0' && isalpha(*p) && max_fields-- > 0) {
                     switch (*p) {
@@ -108,6 +107,7 @@ int main(int argc, char *argv[])
             }
         }
     }
+    
     int (*comparison_function)(void *, void*) = (int (*)(void*, void*))master_compare;
 
     if ((nlines = readlines(lineptr, buf)) > 0) {
@@ -123,7 +123,7 @@ int main(int argc, char *argv[])
 /* qsort: sort v[left]....v[right] into increasing order */
 void my_qsort(void *v[], int left, int right, int (*comp)(void *, void *)) {
 
-    if (left >= right)  /* do nothing if the array contains */
+    if (left >= right)  /* do nothing if the array contains nothing */
         return;
     swap(v, left, (left+right)/2);
     int last = left;
